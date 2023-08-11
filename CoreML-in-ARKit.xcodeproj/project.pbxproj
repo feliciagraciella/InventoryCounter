@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240DC9A62A8491B800EEEC93 /* AppleDetector 3 Iteration 460.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 240DC9A52A8491B800EEEC93 /* AppleDetector 3 Iteration 460.mlmodel */; };
+		240DC9A82A84932E00EEEC93 /* AppleDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 240DC9A72A84932E00EEEC93 /* AppleDetector.mlmodel */; };
+		240DC9AA2A84AC8F00EEEC93 /* AppleDetector2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 240DC9A92A84AC8F00EEEC93 /* AppleDetector2.mlmodel */; };
+		240DC9AC2A85457900EEEC93 /* AppleDetector3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 240DC9AB2A85457900EEEC93 /* AppleDetector3.mlmodel */; };
 		43220A9924D59C1B00DD4168 /* BubbleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43220A9824D59C1B00DD4168 /* BubbleNode.swift */; };
 		43220A9D24D5A0C100DD4168 /* YOLOv3Int8LUT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 43220A9C24D5A0C100DD4168 /* YOLOv3Int8LUT.mlmodel */; };
 		43220AA124D5B25500DD4168 /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43220AA024D5B25500DD4168 /* Throttler.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240DC9A52A8491B800EEEC93 /* AppleDetector 3 Iteration 460.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "AppleDetector 3 Iteration 460.mlmodel"; sourceTree = "<group>"; };
+		240DC9A72A84932E00EEEC93 /* AppleDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AppleDetector.mlmodel; sourceTree = "<group>"; };
+		240DC9A92A84AC8F00EEEC93 /* AppleDetector2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AppleDetector2.mlmodel; sourceTree = "<group>"; };
+		240DC9AB2A85457900EEEC93 /* AppleDetector3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AppleDetector3.mlmodel; sourceTree = "<group>"; };
 		43220A9824D59C1B00DD4168 /* BubbleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleNode.swift; sourceTree = "<group>"; };
 		43220A9C24D5A0C100DD4168 /* YOLOv3Int8LUT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Int8LUT.mlmodel; sourceTree = "<group>"; };
 		43220AA024D5B25500DD4168 /* Throttler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
@@ -87,6 +95,10 @@
 		438F259A24D8967300B80D7E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				240DC9AB2A85457900EEEC93 /* AppleDetector3.mlmodel */,
+				240DC9A92A84AC8F00EEEC93 /* AppleDetector2.mlmodel */,
+				240DC9A72A84932E00EEEC93 /* AppleDetector.mlmodel */,
+				240DC9A52A8491B800EEEC93 /* AppleDetector 3 Iteration 460.mlmodel */,
 				43221FA224D56328005A637E /* AppDelegate.swift */,
 				43220A9C24D5A0C100DD4168 /* YOLOv3Int8LUT.mlmodel */,
 				43221FAB24D5632A005A637E /* Assets.xcassets */,
@@ -187,10 +199,14 @@
 			files = (
 				43220AA324D5C39400DD4168 /* SCNVector3+Extension.swift in Sources */,
 				43221FA724D56328005A637E /* ViewController.swift in Sources */,
+				240DC9AA2A84AC8F00EEEC93 /* AppleDetector2.mlmodel in Sources */,
 				43E1469924D56A85009046C4 /* UIDevice+Extension.swift in Sources */,
 				43220AA124D5B25500DD4168 /* Throttler.swift in Sources */,
+				240DC9AC2A85457900EEEC93 /* AppleDetector3.mlmodel in Sources */,
 				43220A9924D59C1B00DD4168 /* BubbleNode.swift in Sources */,
+				240DC9A82A84932E00EEEC93 /* AppleDetector.mlmodel in Sources */,
 				43220A9D24D5A0C100DD4168 /* YOLOv3Int8LUT.mlmodel in Sources */,
+				240DC9A62A8491B800EEEC93 /* AppleDetector 3 Iteration 460.mlmodel in Sources */,
 				43E1469624D569BA009046C4 /* ObjectDetectionService.swift in Sources */,
 				43221FA324D56328005A637E /* AppDelegate.swift in Sources */,
 			);
@@ -337,7 +353,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BB6356MAF8;
+				DEVELOPMENT_TEAM = C5Y49KMGJ2;
 				INFOPLIST_FILE = "CoreML-in-ARKit/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,7 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BB6356MAF8;
+				DEVELOPMENT_TEAM = C5Y49KMGJ2;
 				INFOPLIST_FILE = "CoreML-in-ARKit/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -13,7 +13,7 @@ import ARKit
 
 class ViewController: UIViewController {
     var objectDetectionService = ObjectDetectionService()
-    let throttler = Throttler(minimumDelay: 1, queue: .global(qos: .userInteractive))
+    let throttler = Throttler(minimumDelay: 0.1, queue: .global(qos: .userInteractive))
     var isLoopShouldContinue = true
     var lastLocation: SCNVector3?
 
@@ -80,7 +80,8 @@ class ViewController: UIViewController {
     func performDetection() {
         guard let pixelBuffer = sceneView.session.currentFrame?.capturedImage else { return }
         
-        objectDetectionService.detect(on: .init(pixelBuffer: pixelBuffer)) { [weak self] result in
+        objectDetectionService.detect(on: .init(pixelBuffer: pixelBuffer)) {
+            [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):
@@ -90,7 +91,19 @@ class ViewController: UIViewController {
                     Int(self.sceneView.bounds.height))
                 self.addAnnotation(rectOfInterest: rectOfInterest,
                                    text: response.classification)
-            
+                print(response.classification)
+                print(response.conf)
+               
+//            case .success(let response2):
+//                let rectOfInterest = VNImageRectForNormalizedRect(
+//                    response2.boundingBox,
+//                    Int(self.sceneView.bounds.width),
+//                    Int(self.sceneView.bounds.height))
+//                self.addAnnotation(rectOfInterest: rectOfInterest,
+//                                   text: response2.classification)
+//                print(response2.classification)
+//                print(response2.conf)
+                
             case .failure(let error):
                 break
             }

@@ -12,7 +12,7 @@ import Vision
 import SceneKit
 
 class ObjectDetectionService {
-    var mlModel = try! VNCoreMLModel(for: YOLOv3Int8LUT().model)
+    var mlModel = try! VNCoreMLModel(for: AppleDetector3().model)
     
     lazy var coreMLRequest: VNCoreMLRequest = {
         return VNCoreMLRequest(model: mlModel,
@@ -49,16 +49,26 @@ private extension ObjectDetectionService {
             return
         }
         
-        guard let result = results.first(where: { $0.confidence > 0.8 }),
+        guard let result = results.first(where: { $0.confidence > 0.7 }),
             let classification = result.labels.first else {
                 complete(.failure(RecognitionError.lowConfidence))
                 return
         }
         
+//        guard let result2 = results.first(where: { $0.confidence > 0 }),
+//            let classification = result.labels.first else {
+//                complete(.failure(RecognitionError.lowConfidence))
+//                return
+//        }
+//
+//        let response2 = Response(boundingBox: result.boundingBox,
+//                                classification: classification.identifier, conf: result.confidence)
+        
         let response = Response(boundingBox: result.boundingBox,
-                                classification: classification.identifier)
+                                classification: classification.identifier, conf: result.confidence)
         
         complete(.success(response))
+//        complete(.success(response2))
     }
     
     func complete(_ result: Result<Response, Error>) {
@@ -83,5 +93,6 @@ extension ObjectDetectionService {
     struct Response {
         let boundingBox: CGRect
         let classification: String
+        let conf: Float
     }
 }
